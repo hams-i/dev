@@ -9,7 +9,8 @@ window.addEventListener('load', function() {
         menu.addEventListener('click', () => {
             var product_the_photo = menu.firstChild.src;
             menu_big_container.style.display = "flex";
-            product_photo.style.backgroundImage = 'url(/'+product_the_photo+')';
+            console.log(product_the_photo);
+            product_photo.style.backgroundImage = 'url('+product_the_photo+')';
         });
         menu_big_container.addEventListener('click', () => {
             menu_big_container.style.display = "none";
