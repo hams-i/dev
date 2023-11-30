@@ -1359,7 +1359,7 @@ footer img {
 }
 .menu-big-photo .big-photo .big-photo-img {
   position: relative;
-  height: 80vh;
+  height: auto;
   width: 80vw;
   background-size: contain;
   background-repeat: no-repeat no-repeat;

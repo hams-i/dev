@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
             var product_the_photo = menu.firstChild.src;
             menu_big_container.style.display = "flex";
             console.log(product_the_photo);
-            product_photo.style.backgroundImage = 'url('+product_the_photo+')';
+            product_photo.src = product_the_photo;
         });
         menu_big_container.addEventListener('click', () => {
             menu_big_container.style.display = "none";
