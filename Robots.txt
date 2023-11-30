@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://surname.com.tr/sitemap.xml

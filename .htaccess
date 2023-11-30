@@ -1,0 +1,11 @@
+RewriteEngine on
+RewriteCond %{THE_REQUEST} /([^.]+).html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+ErrorDocument 404 https://surname.com.tr
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.surname.com.tr/$1 [L,R=301]
