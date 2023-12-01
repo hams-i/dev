@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div İçeriğini Oku</title>
+</head>
+<body>
+
+<h1 id="sonucH1"></h1>
+
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://www.surname.com.tr", true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(xhr.responseText, "text/html");
+
+            // second-time class'ına sahip div'in içeriğini alma
+            var secondTimeDivContent = doc.querySelector('.second-time').innerHTML;
+
+            // h1 elementine içeriği yerleştirme
+            document.getElementById('sonucH1').innerHTML = secondTimeDivContent;
+        }
+    };
+    xhr.send();
+</script>
+
+</body>
+</html>
